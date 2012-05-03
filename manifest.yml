@@ -1,0 +1,15 @@
+---
+applications:
+  .:
+    name: cfahn
+    framework:
+      name: standalone
+      info:
+        mem: 64M
+        description: Standalone Application
+        exec: 
+    runtime: ruby19
+    command: bundle exec ahn start .
+    url: 
+    mem: 128M
+    instances: 1
