@@ -34,6 +34,18 @@ heroku ps:scale web=0
 heroku ps:scale ahn=1
 ```
 
+### Running your app on Cloud Foundry
+
+In order to run an adhearsion application on Cloud Foundry, you must create the application as a standalone application. A sample manifest is included (`manifest.yml`), simply change the `name` to something unique and perform the following routine:
+
+```
+vmc target api.cloudfoundry.com
+vmc login
+vmc push
+vmc env-add yourappname AHN_PUNCHBLOCK_USERNAME=me@here.com
+vmc env-add yourappname AHN_PUNCHBLOCK_PASSWORD=mypasswd
+```
+
 More detail is available in the [deployment documentation](http://adhearsion.com/docs/best-practices/deployment).
 
 Check out [the Adhearsion website](http://adhearsion.com) for more details of where to go from here.
